@@ -6,7 +6,7 @@
 
 static u8 ADC_BusyFlag;
 
-static void (*ADC_Fptr) (void)= NULL_PTR;
+static void (*ADC_Fptr) (void)= NULLPTR;
 
 void ADC_Init (ADC_VoltRef_type vref, ADC_Prescaler_type scaler)
 {
@@ -80,7 +80,6 @@ void ADC_StartConversion(ADC_Channel_type CH)
 
 u16 ADC_GetRead(void)
 {
-	
 	
 	/*get read*/
 	//u16 adc=ADCL;
@@ -157,7 +156,7 @@ void ADC_SetInterruptCallBack(void (*LocalPtr)(void))
 ISR (ADC_vect)
 {
 	ADC_BusyFlag=0;
-	if (ADC_Fptr!=NULL_PTR)
+	if (ADC_Fptr!=NULLPTR)
 	{
 		ADC_Fptr();
 	}
