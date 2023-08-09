@@ -147,7 +147,7 @@ void EX_Interrupt_SetCallBack(EX_Interrupt_Source_type interrupt,void (*LocalPtr
 
 ISR(INT0_vect)
 {
-	if (INT0_Fptr!=NULL_PTR)
+	if (INT0_Fptr!=NULLPTR)
 	{
 		INT0_Fptr();
 	}
@@ -155,7 +155,7 @@ ISR(INT0_vect)
 
 ISR(INT1_vect)
 {
-	if (INT1_Fptr!=NULL_PTR)
+	if (INT1_Fptr!=NULLPTR)
 	{
 		INT1_Fptr();
 	}
@@ -163,7 +163,7 @@ ISR(INT1_vect)
 
 ISR(INT2_vect)
 {
-	if (INT2_Fptr!=NULL_PTR)
+	if (INT2_Fptr!=NULLPTR)
 	{
 		INT2_Fptr();
 	}
