@@ -101,8 +101,8 @@ void Timer1_OCRB1Mode(OC1B_Mode_type oc1b_mode);
 void TIMER1_SetCompareValueA(u16 compare);
 void TIMER1_SetCompareValueB(u16 compare);
 void TIMER1_SetTimerValue(u16 counter);
-void TIMER1_SetICPValue(u16 counter);
-
+void TIMER1_SetICUValue(u16 counter);
+u16 TIMER1_GetICUValue(void);
 void Timer1_ICU_InterruptEnable(void);
 void Timer1_ICU_InterruptDisable(void);
 

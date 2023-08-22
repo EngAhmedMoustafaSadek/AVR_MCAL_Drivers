@@ -225,10 +225,15 @@ void TIMER1_SetTimerValue(u16 counter)
 {
 	TCNT1=counter;
 }
-void TIMER1_SetICPValue(u16 counter)
+void TIMER1_SetICUValue(u16 counter)
 {
 	ICR1=counter;
 }
+u16 TIMER1_GetICUValue(void)
+{
+	return ICR1;
+}
+
 /****************************Timer 1 Interrupt functions**************************************/
 
 void Timer1_ICU_InterruptEnable(void)
